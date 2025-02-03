@@ -29,20 +29,38 @@
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Enoch</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span>
 	      </button>
-
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+	          <li class="nav-item"><a href="#skills-section" class="nav-link" style="color:white;"><span>Skills</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
+		  <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+			<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+			  <mask class="moon" id="moon-mask">
+				<rect x="0" y="0" width="100%" height="100%" fill="white" />
+				<circle cx="24" cy="10" r="6" fill="black" />
+			  </mask>
+			  <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+			  <g class="sun-beams" stroke="currentColor">
+				<line x1="12" y1="1" x2="12" y2="3" />
+				<line x1="12" y1="21" x2="12" y2="23" />
+				<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+				<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+				<line x1="1" y1="12" x2="3" y2="12" />
+				<line x1="21" y1="12" x2="23" y2="12" />
+				<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+				<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+			   </g>
+			</svg>
+		  </button>
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
@@ -58,7 +76,7 @@
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Enoch Bamigboye</span></h1>
-			            <h2 class="mb-4">A Freelance Web Developer</h2>
+			            <h2 class="mb-4" style="color:var(--modewhite);">A Freelance Web Developer</h2>
 			            <p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
@@ -99,19 +117,19 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
-		            <h2 class="mb-4">About Me</h2>
-		            <p>Programming is the key to unlocking technology's potential. Every line of code is a building block for the future</p>
+		          	<h1 class="big" style="color:var(--textaboutsome);">About</h1>
+		            <h2 class="mb-4" style="color:var(--modewhite);">About Me</h2>
+		            <p style="color:var(--greytoblack);" class="funnnuy">Programming is the key to unlocking technology's potential. Every line of code is a building block for the future</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
-		            	<li class="d-flex"><span>Name:</span> <span>Bamigboye Enoch </span></li>
-		            	<li class="d-flex"><span>Email:</span> <span>bamigboyeayomide@gmail.com</span></li>
-		            	<li class="d-flex"><span>Phone: </span> <span>+234-9131678833</span></li>
+		            	<li class="d-flex"><span>Name:</span> <span style="color:var(--greytoblack)">Bamigboye Enoch </span></li>
+		            	<li class="d-flex"><span>Email:</span> <span style="color:var(--greytoblack)">bamigboyeayomide@gmail.com</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span style="color:var(--greytoblack)">+234-9131678833</span></li>
 		            </ul>
 		          </div>
 		        </div>
-	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-              <div class="text">
-              	<p class="mb-4">
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3" style="justify-content: center; text-align: center; width: 100%;">
+              <div class="text" style="display: flex; flex-direction: column; align-items: center;">
+              	<p class="mb-4" style="text-align: center;">
 	                <span class="number" data-number="21">0</span>
 	                <span>Project complete</span>
                 </p>
@@ -128,50 +146,50 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Programming is the art of problem-solving, one line at a time. With every algorithm, we turn challenges into solutions</p>
+            <h2 class="mb-4" style="color:var(--modewhite);">Resume</h2>
+            <p style="color:var(--greytoblack)">Programming is the art of problem-solving, one line at a time. With every algorithm, we turn challenges into solutions</p>
           </div>
         </div>
     		<div class="row">
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2023-present</span>
-    					<h2>Wordpress Developer</h2>
-    					<span class="position">Remis Städservice</span>
-    					<p class="mt-4">I developed a custom website from scratch for Remis Städservice, incorporating a blog with multiple pages. I also created a RESTful API to easily add and manage blog posts, ensuring a smooth and dynamic user experience.</p>
+    					<h2 style="color:var(--modewhite);">Wordpress Developer</h2>
+    					<span class="position" style="color:var(--greytoblack)">Remis Städservice</span>
+    					<p class="mt-4" style="color:var(--greytoblack)">I developed a custom website from scratch for Remis Städservice, incorporating a blog with multiple pages. I also created a RESTful API to easily add and manage blog posts, ensuring a smooth and dynamic user experience.</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2022-2026</span>
-    					<h2>Bachelor's Degree of C.S</h2>
-    					<span class="position">Babcock University</span>
-    					<p class="mt-4">Spending my time at Babcock University, I'm developing a strong foundation in programming, algorithms, and software engineering. I participated in various projects that enhanced my skills in problem-solving and critical thinking, preparing me for a successful career in technology.</p>
+    					<h2 style="color:var(--modewhite);">Bachelor's Degree of C.S</h2>
+    					<span class="position" style="color:var(--greytoblack)">Babcock University</span>
+    					<p class="mt-4" style="color:var(--greytoblack)">Spending my time at Babcock University, I'm developing a strong foundation in programming, algorithms, and software engineering. I participated in various projects that enhanced my skills in problem-solving and critical thinking, preparing me for a successful career in technology.</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2023-2015</span>
-    					<h2>Media Technicianr</h2>
-    					<span class="position">MFM Church</span>
-    					<p class="mt-4">Managed live video recording and streaming, captured audience photos, and posted content on social media. Used EasyWorship to create interactive and engaging live streams for church services.</p>
+    					<h2 style="color:var(--modewhite);">Media Technicianr</h2>
+    					<span class="position" style="color:var(--greytoblack)">MFM Church</span>
+    					<p class="mt-4" style="color:var(--greytoblack)">Managed live video recording and streaming, captured audience photos, and posted content on social media. Used EasyWorship to create interactive and engaging live streams for church services.</p>
     				</div>
     			</div>
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2023-2023</span>
-    					<h2>IT Assistant (Intern)</h2>
-    					<span class="position">Lagos Airport Hotel</span>
-    					<p class="mt-4">As an IT Assistant at Lagos Airport Hotel, I provided technical support, managed network systems, and ensured smooth operation of IT infrastructure. I also assisted in troubleshooting hardware and software issues, contributing to the efficient functioning of the hotel's technology systems.</p>
+    					<h2 style="color:var(--modewhite);">IT Assistant (Intern)</h2>
+    					<span class="position" style="color:var(--greytoblack)">Lagos Airport Hotel</span>
+    					<p class="mt-4" style="color:var(--greytoblack)">As an IT Assistant at Lagos Airport Hotel, I provided technical support, managed network systems, and ensured smooth operation of IT infrastructure. I also assisted in troubleshooting hardware and software issues, contributing to the efficient functioning of the hotel's technology systems.</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2021-Present</span>
-    					<h2>Freelance Web-Developer</h2>
-    					<span class="position">Fiver, Upwork,Refered Clients </span>
-    					<p class="mt-4">Developed responsive websites and custom web applications for clients on Fiverr, Upwork, and through referrals. Focused on delivering high-quality, tailored solutions.</p>
+    					<h2 style="color:var(--modewhite);">Freelance Web-Developer</h2>
+    					<span class="position" style="color:var(--greytoblack)">Fiver, Upwork,Refered Clients </span>
+    					<p class="mt-4" style="color:var(--greytoblack)">Developed responsive websites and custom web applications for clients on Fiverr, Upwork, and through referrals. Focused on delivering high-quality, tailored solutions.</p>
     				</div>
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2020-2021</span>
-    					<h2>Graphics Designer & Web-Developer</h2>
-    					<span class="position">SG Graphics</span>
-    					<p class="mt-4"> While learning and creating Graphical Contents i built a responsive portfolio website for SG Graphics using AWS S3 for hosting. Created a backend with IAM access keys for admin to manage content and integrated WhatsApp API for automated customer outreach.</p>
+    					<h2 style="color:var(--modewhite);">Graphics Designer & Web-Developer</h2>
+    					<span class="position" style="color:var(--greytoblack)">SG Graphics</span>
+    					<p class="mt-4" style="color:var(--greytoblack)"> While learning and creating Graphical Contents i built a responsive portfolio website for SG Graphics using AWS S3 for hosting. Created a backend with IAM access keys for admin to manage content and integrated WhatsApp API for automated customer outreach.</p>
     				</div>
     			</div>
     		</div>
@@ -188,8 +206,8 @@
     		<div class="row justify-content-center py-5 mt-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Services</h1>
-            <h2 class="mb-4">Services</h2>
-            <p>Programming is the key to unlocking technology's potential. Every line of code is a building block for the future</p>
+            <h2 class="mb-4" style="color:var(--modewhite);">Services</h2>
+            <p style="color:var(--greytoblack)">Programming is the key to unlocking technology's potential. Every line of code is a building block for the future</p>
           </div>
         </div>
     		<div class="row">
@@ -264,14 +282,14 @@
 				<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">My Skills</h2>
-            <p>Turn logic into magic with code. Programming is the language that powers our digital world</p>
+            <h2 class="mb-4 otherscolor" style="color:var(--modewhite);">My Skills</h2>
+            <p style="color:var(--greytoblack)">Turn logic into magic with code. Programming is the language that powers our digital world</p>
           </div>
         </div>
 				<div class="row">
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Figma</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">Figma</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
@@ -282,7 +300,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>jQuery</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">jQuery</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
@@ -293,7 +311,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>HTML5</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">HTML5</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
@@ -304,7 +322,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>CSS3</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">CSS3</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
@@ -315,7 +333,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>WordPress</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">WordPress</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -326,7 +344,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>SEO</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">SEO</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
@@ -337,7 +355,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Tailwind-Css</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">Tailwind</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="40"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:40%">
@@ -348,7 +366,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Javascript</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">Javascript</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="70"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -359,7 +377,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>React</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">React</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="30"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:30%">
@@ -370,7 +388,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>PHP</h3>
+							<h3 class="otherscolor" style="color:var(--modewhite);">PHP</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="40"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:40%">
@@ -389,8 +407,8 @@
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">My Projects</h2>
-            <p>Crafting solutions through elegant code, line by line. In a world driven by technology, innovation begins with a simple algorithm</p>
+            <h2 class="mb-4" style="color:var(--modewhite);">My Projects</h2>
+            <p style="color:var(--greytoblack)">Crafting solutions through elegant code, line by line. In a world driven by technology, innovation begins with a simple algorithm</p>
           </div>
         </div>
     		<div class="row">
@@ -459,8 +477,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>I'm <span>Available</span> for freelancing</h2>
-						<p>Code your dreams into reality, one line at a time. Every keystroke is a step towards innovation, transforming ideas into digital masterpieces.</p>
+						<h2 style="color:var(--modewhite);"><span style="color:white;">I'm </span><span>Available</span> for freelancing</h2>
+						<p style="color:white;">Code your dreams into reality, one line at a time. Every keystroke is a step towards innovation, transforming ideas into digital masterpieces.</p>
 						<p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5">Hire me</a></p>
 					</div>
 				</div>
@@ -472,8 +490,8 @@
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Building the future, one line of code at a time. With every function and loop, we design the blueprint for tomorrow's technology.</p>
+            <h2 class="mb-4" style="color:var(--modewhite);">Contact Me</h2>
+            <p style="color:var(--greytoblack)">Building the future, one line of code at a time. With every function and loop, we design the blueprint for tomorrow's technology.</p>
           </div>
         </div>
 
@@ -483,7 +501,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
-          		<h3 class="mb-4">Address</h3>
+          		<h3 class="mb-4" style="color:var(--modewhite);"">Address</h3>
 	            <p>Lagos Nigeria</p>
 	          </div>
           </div>
@@ -492,7 +510,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
-          		<h3 class="mb-4">Contact Number</h3>
+          		<h3 class="mb-4" style="color:var(--modewhite);">Contact Number</h3>
 	            <p><a href="tel://1234567920">+234-9131678833</a></p>
 	          </div>
           </div>
@@ -501,7 +519,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
-          		<h3 class="mb-4">Email Address</h3>
+          		<h3 class="mb-4" style="color:var(--modewhite);">Email Address</h3>
 	            <p><a href="mailto:bamigboyeayomide095@gmail.com">Email Me</a></p>
 	          </div>
           </div>
@@ -510,7 +528,7 @@
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-globe"></span>
           		</div>
-          		<h3 class="mb-4">Website</h3>
+          		<h3 class="mb-4" style="color:var(--modewhite);">Website</h3>
 	            <p><a href="https://enoch-ochre.vercel.app">enoch-ochre.vercel.app</a></p>
 	          </div>
           </div>
@@ -518,7 +536,7 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="#" class="p-4 p-md-5 contact-form">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name">
               </div>
@@ -528,7 +546,7 @@
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Subject">
               </div>
-              <div class="form-group">
+              <div class="form-group" style="color: var(--modeblack);">
                 <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
@@ -546,7 +564,7 @@
     </section>
 		
 
-    <footer class="ftco-footer ftco-section">
+    <footer class="ftco-footer ftco-section otherscolor">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
@@ -554,9 +572,9 @@
               <h2 class="ftco-heading-2">About</h2>
               <p>Turn your ideas into digital masterpieces with the power of code. From concept to creation, code is the bridge that brings imagination to life</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://www.x.com/@baydee40"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/Baydee.Ayo"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/baydee_ayo"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.x.com/@baydee40"><span class="icon-twitter" style="color:var(--greytoblack)"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/Baydee.Ayo"><span class="icon-facebook" style="color:var(--greytoblack)"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/baydee_ayo"><span class="icon-instagram" style="color:var(--greytoblack)"></span></a></li>
               </ul>
             </div>
           </div>
@@ -564,11 +582,11 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Home</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>About</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Services</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Projects</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Contact</a></li>
               </ul>
             </div>
           </div>
@@ -576,10 +594,10 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Web Design</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Web Development</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Data Analysis</a></li>
+                <li><a href="#" style="color:var(--greytoblack)"><span class="icon-long-arrow-right mr-2" style="color:var(--greytoblack)"></span>Graphic Design</a></li>
               </ul>
             </div>
           </div>
@@ -588,9 +606,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Lagos Nigeria</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234-9131678833</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">bamigboyeayomide095@gmail.com</span></a></li>
+	                <li><span class="icon icon-map-marker" style="color:var(--greytoblack)"></span><span class="text">Lagos Nigeria</span></li>
+	                <li><a href="#"><span class="icon icon-phone" style="color:var(--greytoblack)"></span><span class="text" style="color:var(--greytoblack)">+234-9131678833</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope" style="color:var(--greytoblack)"></span><span class="text" style="color:var(--greytoblack)">bamigboyeayomide095@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -604,7 +622,7 @@
   
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2878FF"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>

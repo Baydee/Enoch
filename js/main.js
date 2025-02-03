@@ -96,13 +96,19 @@
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
-	        items:1
+	        items:1,
+			touchDrag: false, 
+			mouseDrag: false, 
 	      },
 	      600:{
-	        items:1
+	        items:1,
+			touchDrag: true,
+            mouseDrag: true,
 	      },
 	      1000:{
-	        items:1
+	        items:1,
+			touchDrag: true,
+            mouseDrag: true,
 	      }
 	    }
 		});
@@ -274,4 +280,217 @@
 
 
 })(jQuery);
+
+$('#ftco-nav').on('shown.bs.collapse hidden.bs.collapse', function() {
+	var isExpanded = $('.navbar-toggler').attr('aria-expanded') === 'true';
+	$('.navbar-toggler .oi')[isExpanded ? 'addClass' : 'removeClass']('oi-x');
+  });
+
+  
+  const storageKey = 'theme-preference'
+
+  const onClick = () => {
+	// flip current value
+	theme.value = theme.value === 'light'
+	  ? 'dark'
+	  : 'light'
+  
+	setPreference()
+  }
+  
+  const getColorPreference = () => {
+	if (localStorage.getItem(storageKey))
+	  return localStorage.getItem(storageKey)
+	else
+	  return window.matchMedia('(prefers-color-scheme: dark)').matches
+		? 'dark'
+		: 'light'
+  }
+  
+  const setPreference = () => {
+	localStorage.setItem(storageKey, theme.value)
+	reflectPreference()
+  }
+  
+  const reflectPreference = () => {
+	document.firstElementChild
+	  .setAttribute('data-theme', theme.value)
+  
+	document
+	  .querySelector('#theme-toggle')
+	  ?.setAttribute('aria-label', theme.value)
+  }
+  
+  const theme = {
+	value: getColorPreference(),
+  }
+  
+  // set early so no page flashes / CSS is made aware
+  reflectPreference()
+  
+  window.onload = () => {
+	// set on load so screen readers can see latest value on the button
+	reflectPreference()
+  
+	// now this script can find and listen for clicks on the control
+	document
+	  .querySelector('#theme-toggle')
+	  .addEventListener('click', onClick)
+  }
+  
+  // sync with system changes
+  window
+	.matchMedia('(prefers-color-scheme: dark)')
+	.addEventListener('change', ({matches:isDark}) => {
+	  theme.value = isDark ? 'dark' : 'light'
+	  setPreference()
+	})
+	const darkModeColors = {
+		'--modeblue': '#007bff',
+		'--modeindigo': '#6610f2',
+		'--modepink': '#e83e8c',
+		'--modered': '#dc3545',
+		'--modeorange': '#fd7e14',
+		'--modeyellow': '#ffc107',
+		'--modegreen': '#28a745',
+		'--modeteal': '#20c997',
+		'--modecyan': '#17a2b8',
+		'--modewhite': '#ffffff',
+		'--modegray': '#6c757d',
+		'--modegraydark': '#343a40',
+		'--modeicon-fill': '#121212',
+		'--modeicon-fill-hover': '#666666',
+		'--modetable-primary': '#b8daff',
+		'--modetable-primary-hover': '#9fcdff',
+		'--modetable-secondary': '#d6d8db',
+		'--modetable-secondary-hover': '#c8cbcf',
+		'--modetable-success': '#c3e6cb',
+		'--modetable-success-hover': '#b1dfbb',
+		'--modetable-info': '#bee5eb',
+		'--modetable-info-hover': '#abdde5',
+		'--modetable-warning': '#ffeeba',
+		'--modetable-warning-hover': '#ffe8a1',
+		'--modetable-danger': '#f5c6cb',
+		'--modetable-danger-hover': '#0e4f44',
+		'--mode-table-light': '#fdfdfe',
+		'--modetable-light-border': '#fbfcfc',
+		'--modetable-light-hover': '#ececf6',
+		'--modetable-dark': '#c6c8ca',
+		'--modetable-dark-border': '#95999c',
+		'--modetable-dark-hover': '#b9bbbe',
+		'--modeblack' : '#000000',
+		'--background-colorrand':'#212529',
+		'--formcolorborder' : '#80bdff',
+		'--modeiconsocial' :'#ffffff1a',
+		'--textaboutsome' : 'rgba(255, 255, 255, 0.1)',
+		'--greytoblack': 'rgba(255, 255, 255, 0.7)'
+	  };
+	  const lightModeColors = {
+		'--modeblue': '#007bff', // Blue stays unchanged
+		'--modeindigo': '#99ef0d', // Inverted
+		'--modepink': '#17c173',
+		'--modered': '#23caba',
+		'--modeorange': '#0281eb',
+		'--modeyellow': '#003ef8',
+		'--modegreen': '#d758ba',
+		'--modeteal': '#df3668',
+		'--modecyan': '#e85d47',
+		'--modewhite': '#000000',
+		'--modegray': '#938a82',
+		'--modegraydark': '#cbc5bf',
+		'--modeicon-fill': '#ededed',
+		'--modeicon-fill-hover': '#999999',
+		'--modetable-primary': '#b8daff', // Blue remains the same
+		'--modetable-primary-hover': '#9fcdff',
+		'--modetable-secondary': '#292724',
+		'--modetable-secondary-hover': '#373430',
+		'--modetable-success': '#3c1934',
+		'--modetable-success-hover': '#4e2044',
+		'--modetable-info': '#651a20',
+		'--modetable-info-hover': '#54221a',
+		'--modetable-warning': '#001769',
+		'--modetable-warning-hover': '#00175e',
+		'--modetable-danger': '#0a3934',
+		'--modetable-danger-hover': '#0e4f44',
+		'--mode-table-light': '#020201',
+		'--modetable-light-border': '#040303',
+		'--modetable-light-hover': '#191909',
+		'--modetable-dark': '#393735',
+		'--modetable-dark-border': '#6a6663',
+		'--modetable-dark-hover': '#464441',
+		'--modeblack' : '#ffffff',
+		'--background-colorrand':'#ffffff',
+		'--formcolorborder' : '#000000',
+		'--modeiconsocial' :'#0000001a',
+		'--textaboutsome' : 'rgba(0, 0, 0, 0.1)',
+		'--greytoblack' : '#000'
+	  };
+let darkMode = true;
+
+function toggleMode() {
+	try {
+	  // Get DOM elements with null checks
+	  const root = document.documentElement;
+	  if (!root) throw new Error('Root element not found');
+	  
+	  const contactForm = document.querySelector('.contact-form');
+	  const themeToggle = document.getElementById('theme-toggle');
+	  if (!themeToggle) throw new Error('Theme toggle button not found');
+  
+	  // Get stored theme or default to true
+	  darkMode = localStorage.getItem('darkMode') === 'false' ? false : true;
+  
+	  // Determine colors and classes to use
+	  const colors = darkMode ? lightModeColors : darkModeColors;
+	  const removeClass = darkMode ? 'bg-dark' : 'bg-secondary';
+	  const addClass = darkMode ? 'bg-secondary' : 'bg-dark';
+  
+	  // Update colors
+	  Object.keys(colors).forEach(key => {
+		root.style.setProperty(key, colors[key]);
+	  });
+  
+	  // Update form classes if form exists
+	  if (contactForm) {
+		contactForm.classList.remove(removeClass);
+		contactForm.classList.add(addClass);
+	  }
+  
+	  // Toggle and save state
+	  darkMode = !darkMode;
+	  localStorage.setItem('darkMode', darkMode);
+  
+	} catch (error) {
+	  console.error('Error toggling theme:', error);
+	}
+  }
+  
+  // Add event listener with error handling
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle?.addEventListener('click', toggleMode);
+  
+  // Initialize theme on page load
+  document.addEventListener('DOMContentLoaded', () => {
+	const savedTheme = localStorage.getItem('darkMode');
+	if (savedTheme !== null) {
+	  darkMode = savedTheme === 'true';
+	  toggleMode();
+	}
+  });
+  // Add this after your existing jQuery code
+$(document).ready(function() {
+  // Close navbar when clicking outside
+  $(document).click(function(event) {
+    const clickover = $(event.target);
+    const opened = $('.navbar-collapse').hasClass('show');
+    if (opened && !clickover.hasClass('navbar-toggler') && !clickover.closest('.navbar-collapse').length) {
+      $('.navbar-toggler').click();
+    }
+  });
+
+  // Close navbar when clicking a nav item
+  $('.nav-link').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+});
 
