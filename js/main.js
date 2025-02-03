@@ -27,7 +27,6 @@
 	};
 	fullHeight();
 
-	// loader
 	var loader = function() {
 		setTimeout(function() { 
 			if($('#ftco-loader').length > 0) {
@@ -37,7 +36,6 @@
 	};
 	loader();
 
-	// Scrollax
    $.Scrollax();
 
 
@@ -74,7 +72,6 @@
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
 	    }, 500, function() {
-	    	// window.location.hash = href;
 	    });
 		});
 
@@ -117,21 +114,14 @@
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
-		// 	 timer;
-		// clearTimeout(timer);
 		$this.addClass('show');
 		$this.find('> a').attr('aria-expanded', true);
-		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
 		$this.find('.dropdown-menu').addClass('show');
 	}, function(){
 		var $this = $(this);
-			// timer;
-		// timer = setTimeout(function(){
 			$this.removeClass('show');
 			$this.find('> a').attr('aria-expanded', false);
-			// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
 			$this.find('.dropdown-menu').removeClass('show');
-		// }, 100);
 	});
 
 
@@ -250,18 +240,18 @@
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: 'mfp-no-margins mfp-with-zoom', 
      gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0,1] 
     },
     image: {
       verticalFit: true
     },
     zoom: {
       enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+      duration: 300 
     }
   });
 
@@ -325,20 +315,19 @@ $('#ftco-nav').on('shown.bs.collapse hidden.bs.collapse', function() {
 	value: getColorPreference(),
   }
   
-  // set early so no page flashes / CSS is made aware
+
   reflectPreference()
   
   window.onload = () => {
-	// set on load so screen readers can see latest value on the button
+
 	reflectPreference()
   
-	// now this script can find and listen for clicks on the control
 	document
 	  .querySelector('#theme-toggle')
 	  .addEventListener('click', onClick)
   }
   
-  // sync with system changes
+ 
   window
 	.matchMedia('(prefers-color-scheme: dark)')
 	.addEventListener('change', ({matches:isDark}) => {
@@ -386,8 +375,8 @@ $('#ftco-nav').on('shown.bs.collapse hidden.bs.collapse', function() {
 		'--greytoblack': 'rgba(255, 255, 255, 0.7)'
 	  };
 	  const lightModeColors = {
-		'--modeblue': '#007bff', // Blue stays unchanged
-		'--modeindigo': '#99ef0d', // Inverted
+		'--modeblue': '#007bff', 
+		'--modeindigo': '#99ef0d', 
 		'--modepink': '#17c173',
 		'--modered': '#23caba',
 		'--modeorange': '#0281eb',
@@ -400,7 +389,7 @@ $('#ftco-nav').on('shown.bs.collapse hidden.bs.collapse', function() {
 		'--modegraydark': '#cbc5bf',
 		'--modeicon-fill': '#ededed',
 		'--modeicon-fill-hover': '#999999',
-		'--modetable-primary': '#b8daff', // Blue remains the same
+		'--modetable-primary': '#b8daff', 
 		'--modetable-primary-hover': '#9fcdff',
 		'--modetable-secondary': '#292724',
 		'--modetable-secondary-hover': '#373430',
@@ -429,7 +418,6 @@ let darkMode = true;
 
 function toggleMode() {
 	try {
-	  // Get DOM elements with null checks
 	  const root = document.documentElement;
 	  if (!root) throw new Error('Root element not found');
 	  
@@ -437,26 +425,21 @@ function toggleMode() {
 	  const themeToggle = document.getElementById('theme-toggle');
 	  if (!themeToggle) throw new Error('Theme toggle button not found');
   
-	  // Get stored theme or default to true
 	  darkMode = localStorage.getItem('darkMode') === 'false' ? false : true;
   
-	  // Determine colors and classes to use
 	  const colors = darkMode ? lightModeColors : darkModeColors;
 	  const removeClass = darkMode ? 'bg-dark' : 'bg-secondary';
 	  const addClass = darkMode ? 'bg-secondary' : 'bg-dark';
   
-	  // Update colors
 	  Object.keys(colors).forEach(key => {
 		root.style.setProperty(key, colors[key]);
 	  });
   
-	  // Update form classes if form exists
 	  if (contactForm) {
 		contactForm.classList.remove(removeClass);
 		contactForm.classList.add(addClass);
 	  }
   
-	  // Toggle and save state
 	  darkMode = !darkMode;
 	  localStorage.setItem('darkMode', darkMode);
   
@@ -465,11 +448,9 @@ function toggleMode() {
 	}
   }
   
-  // Add event listener with error handling
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle?.addEventListener('click', toggleMode);
   
-  // Initialize theme on page load
   document.addEventListener('DOMContentLoaded', () => {
 	const savedTheme = localStorage.getItem('darkMode');
 	if (savedTheme !== null) {
@@ -477,9 +458,7 @@ function toggleMode() {
 	  toggleMode();
 	}
   });
-  // Add this after your existing jQuery code
 $(document).ready(function() {
-  // Close navbar when clicking outside
   $(document).click(function(event) {
     const clickover = $(event.target);
     const opened = $('.navbar-collapse').hasClass('show');
@@ -488,7 +467,6 @@ $(document).ready(function() {
     }
   });
 
-  // Close navbar when clicking a nav item
   $('.nav-link').click(function() {
     $('.navbar-collapse').collapse('hide');
   });

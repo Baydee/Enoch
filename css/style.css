@@ -123,40 +123,39 @@ h1.mb-4 {
   justify-content: space-between;
   padding: 15px;
 }
-    /* Make the navbar-collapse take full width and stack below header */
+
     .ftco-navbar-light .navbar-collapse {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      background: var(--modeblack); /* or whatever background color you want */
+      background: var(--modeblack); 
       padding: 15px;
     }
   
-    /* Make the nav items stack vertically */
+
     .ftco-navbar-light .navbar-nav {
       flex-direction: column;
       width: 100%;
     }
   
-    /* Add some spacing between nav items */
     .ftco-navbar-light .nav-item {
       margin: 10px 0;
     }
   }
-  @media (max-width: 767.98px) { /* Mobile view */
+  @media (max-width: 767.98px) { 
     .about-info li.d-flex {
-      flex-wrap: wrap; /* Allow content to wrap */
-      gap: 5px; /* Add small space between label and value */
+      flex-wrap: wrap; 
+      gap: 5px; 
     }
     
     .about-info li.d-flex span:first-child {
-      min-width: 70px; /* Give fixed width to labels */
+      min-width: 70px;
     }
     
     .about-info li.d-flex span:last-child {
-      flex: 1; /* Take remaining space */
-      word-break: break-word; /* Break long words/emails */
+      flex: 1; 
+      word-break: break-word; 
     }
   }
   @media (max-width: 767.98px) {
