@@ -1,14 +1,11 @@
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
  .subheading {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+link[rel="icon"] {
+  border-radius: 12px;
+}
 
-/* For the main headings */
 h1.mb-4 {
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
